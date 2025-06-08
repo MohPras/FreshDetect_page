@@ -1,0 +1,567 @@
+:root {
+    --primary: #10B981; /* Hijau Emerald */
+    --primary-dark: #059669; /* Hijau Emerald lebih gelap */
+    --secondary: #3B82F6; /* Biru */
+    --dark: #0A0A0A;
+    --darker: #010101;
+    --light: #F5F5F5;
+    --gray: #1E1E1E;
+    --white: #FFFFFF; /* Putih */
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--white); /* Latar belakang putih */
+    color: #333; /* Warna teks gelap untuk kontras */
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.hero-title {
+    line-height: 1.1;
+    letter-spacing: -0.05em;
+}
+
+.glow-text {
+    text-shadow: 0 0 10px rgba(16, 185, 129, 0.7); /* Warna hijau */
+}
+
+.glow-box {
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.3); /* Warna hijau */
+}
+
+.gradient-box {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(245, 245, 245, 0.9)); /* Gradien terang */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(16, 185, 129, 0.1); /* Border hijau */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1); /* Shadow lebih ringan */
+}
+
+.primary-border {
+    position: relative;
+}
+
+.primary-border::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 2px;
+    background: linear-gradient(45deg, var(--primary), rgba(16, 185, 129, 0.3)); /* Border gradient hijau */
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    pointer-events: none;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+}
+
+.floating {
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); } /* Warna hijau */
+    70% { box-shadow: 0 0 0 15px rgba(16, 185, 129, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+}
+
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+.typewriter {
+    border-right: 3px solid var(--primary);
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+.typing {
+    animation: blink-caret 1s step-end infinite;
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: var(--primary); }
+}
+
+.scrolling-text {
+    animation: scrollText 20s linear infinite;
+    white-space: nowrap;
+    height: 40px; /* Ubah nilai ini sesuai keinginan Anda, misalnya 30px, 25px, dll. */
+    /* Anda juga bisa menambahkan width: auto; agar rasio aspek gambar tetap terjaga */
+    width: auto;
+    margin: 0 16px; /* Memberi jarak antar gambar atau teks */
+    vertical-align: middle;
+}
+
+@keyframes scrollText {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+.gradient-mask {
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.ai-chip {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(90deg, #FFFFFF, #E0E0E0, #FFFFFF); /* Latar belakang chip lebih terang */
+    color: var(--primary);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    box-shadow: 0 0 10px rgba(16, 185, 129, 0.2);
+}
+
+.gradient-text {
+    background: linear-gradient(90deg, var(--primary), var(--secondary)); /* Gradien hijau-biru */
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.shadow-inner-custom {
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.1); /* Shadow lebih ringan */
+}
+
+.grid-pattern {
+    background-image: none; /* Menghilangkan pola grid */
+    background-color: var(--white); /* Latar belakang putih polos */
+}
+
+.hexagon-bg {
+    background-image: none; /* Menghilangkan pola heksagon */
+}
+
+.animated-blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(60px); /* Blur lebih besar */
+    opacity: 0.1; /* Opasitas lebih rendah */
+    animation: blob-move 15s infinite alternate;
+}
+
+@keyframes blob-move {
+    0%, 100% { transform: translate(0%, 0%); }
+    25% { transform: translate(10%, -15%); }
+    50% { transform: translate(5%, 10%); }
+    75% { transform: translate(-10%, 5%); }
+}
+
+.tilt-effect {
+    transition: transform 0.3s ease;
+}
+
+.tilt-effect:hover {
+    transform: perspective(1000px) rotateY(5deg) rotateX(3deg) scale(1.05);
+}
+
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 1rem;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(16, 185, 129, 0.2); /* Warna hijau */
+}
+.feature-card {
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.testimonial-card {
+    transition: all 0.3s ease;
+    border: 1px solid rgba(16, 185, 129, 0.1); /* Warna hijau */
+}
+
+.testimonial-card:hover {
+    border-color: rgba(16, 185, 129, 0.3); /* Warna hijau */
+}
+
+.pricing-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(16, 185, 129, 0.15); /* Warna hijau */
+}
+
+/* Responsive typography */
+@media (max-width: 640px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    .section-title {
+        font-size: 2rem;
+    }
+}
+
+/* Primary underline effect */
+.primary-underline {
+    position: relative;
+    display: inline-block;
+}
+
+.primary-underline::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: -5px;
+    left: 0;
+    background: linear-gradient(90deg, var(--primary), transparent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.primary-underline:hover::after {
+    transform: scaleX(1);
+}
+
+/* Improved button styles */
+.btn-primary {
+    background-color: var(--primary);
+    color: var(--white); /* Teks putih */
+    font-weight: 700;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(16, 185, 129, 0.3); /* Warna hijau */
+}
+
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.2); /* Efek hover putih semi-transparan */
+    transition: all 0.3s ease;
+    z-index: -1;
+}
+
+.btn-primary:hover::before {
+    width: 100%;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border: 2px solid var(--secondary); /* Border biru */
+    color: var(--secondary); /* Teks biru */
+    font-weight: 700;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    color: var(--white); /* Teks putih saat hover */
+    transform: translateY(-2px);
+}
+
+.btn-secondary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: var(--secondary); /* Background biru saat hover */
+    transition: all 0.3s ease;
+    z-index: -1;
+}
+
+.btn-secondary:hover::before {
+    width: 100%;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f0f0f0; /* Track lebih terang */
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 4px;
+}
+
+/* Input field styling */
+.input-field {
+    background-color: rgba(255, 255, 255, 0.8); /* Latar belakang input lebih terang */
+    border: 1px solid rgba(16, 185, 129, 0.2); /* Border hijau */
+    transition: all 0.3s ease;
+    color: #333; /* Teks input gelap */
+}
+
+.input-field:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
+}
+
+/* Sparkle effect */
+.sparkle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background-color: var(--primary);
+    border-radius: 50%;
+    pointer-events: none;
+    opacity: 0;
+}
+
+/* Responsive grid adjustments */
+@media (max-width: 1024px) {
+    .feature-columns {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .feature-columns {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.6s ease forwards;
+}
+
+/* Wave divider */
+.wave-divider {
+    position: relative;
+    height: 60px;
+    overflow: hidden;
+}
+
+.wave-divider svg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Glowing stats */
+.stat-card {
+    background: rgba(255, 255, 255, 0.6); /* Latar belakang kartu terang */
+    border: 1px solid rgba(16, 185, 129, 0.1); /* Border hijau */
+    transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+    border-color: rgba(16, 185, 129, 0.3); /* Warna hijau */
+    transform: translateY(-5px);
+}
+
+/* Gradient border for cards */
+.gradient-border {
+    position: relative;
+    background: var(--white); /* Latar belakang putih */
+}
+
+.gradient-border::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    right: -1px;
+    bottom: -1px;
+    background: linear-gradient(45deg, var(--primary), var(--secondary)); /* Gradien hijau-biru */
+    z-index: -1;
+    border-radius: inherit;
+}
+
+/* Animated gradient text */
+.animated-gradient {
+    background: linear-gradient(-45deg, var(--primary), var(--secondary), var(--primary));
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient 6s ease infinite;
+}
+
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Leaderboard styling (disesuaikan untuk tema) */
+.leaderboard-item:nth-child(1) .rank {
+    background: linear-gradient(135deg, #FFD700, #FFA500); /* Tetap emas */
+    color: black;
+}
+
+.leaderboard-item:nth-child(2) .rank {
+    background: linear-gradient(135deg, #C0C0C0, #A0A0A0); /* Tetap perak */
+    color: black;
+}
+
+.leaderboard-item:nth-child(3) .rank {
+    background: linear-gradient(135deg, #CD7F32, #A66D2C); /* Tetap perunggu */
+    color: black;
+}
+
+/* AI Tool Interface */
+.ai-tool-container {
+    background: linear-gradient(135deg, #F0F0F0 0%, #FFFFFF 100%); /* Latar belakang lebih terang */
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    color: #333; /* Warna teks gelap */
+}
+
+.ai-tool-header {
+    background: rgba(240, 240, 240, 0.8); /* Header lebih terang */
+    padding: 12px 16px;
+    border-bottom: 1px solid rgba(16, 185, 129, 0.1); /* Border hijau */
+}
+
+.ai-tool-content {
+    padding: 20px;
+    min-height: 300px;
+}
+
+.ai-message {
+    background: rgba(245, 245, 245, 0.7); /* Pesan lebih terang */
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin-bottom: 12px;
+    border-left: 3px solid var(--primary); /* Border hijau */
+}
+
+.ai-loading {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--primary);
+}
+
+.ai-loading-dot {
+    width: 8px;
+    height: 8px;
+    background: var(--primary);
+    border-radius: 50%;
+    animation: bounce 1.5s infinite ease-in-out;
+}
+
+.ai-loading-dot:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.ai-loading-dot:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.ai-loading-dot:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+.ai-tool-input {
+    position: relative;
+    margin-top: 16px;
+}
+
+.ai-tool-input input {
+    width: 100%;
+    padding: 12px 16px;
+    background: rgba(240, 240, 240, 0.7); /* Input lebih terang */
+    border: 1px solid rgba(16, 185, 129, 0.2); /* Border hijau */
+    border-radius: 8px;
+    color: #333; /* Teks input gelap */
+    outline: none;
+}
+
+.ai-tool-input button {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--primary);
+    color: var(--white); /* Tombol putih */
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+/* Responsive AI tool positioning */
+@media (max-width: 1024px) {
+    .hero-ai-tool {
+        margin-top: 40px;
+        margin-bottom: 60px;
+    }
+    .ai-tool-floating-card {
+        right: 10px;
+        bottom: -50px;
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-ai-tool {
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+}
+
+/* Responsive testimonial card */
+@media (max-width: 640px) {
+    .testimonial-card {
+        margin-bottom: 20px;
+    }
+}
+
+.custom-card-bg {
+    background-color: #F8F8F8; /* Warna latar belakang kartu yang lebih terang */
+    border: 1px solid #E0E0E0; /* Garis tepi yang lebih lembut */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Bayangan lebih ringan */
+}
+
+.about-card {
+    background-color: var(--white);
+    border: 1px solid rgba(16, 185, 129, 0.1);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+.about-card:hover {
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transform: translateY(-5px);
+}

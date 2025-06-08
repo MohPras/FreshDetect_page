@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreshDetect | Deteksi Kesegaran Buah & Sayur</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/page.css">
+</head>
+<body class="grid-pattern">
+    <div class="fixed inset-0 overflow-hidden pointer-events-none z-0">
+        <div class="animated-blob w-96 h-96 bg-primary -left-20 -top-20 opacity-10" style="animation-delay: 0s;"></div>
+        <div class="animated-blob w-80 h-80 bg-blue-500 top-1/4 -right-40 opacity-10" style="animation-delay: 2s;"></div>
+        <div class="animated-blob w-96 h-96 bg-green-500 bottom-0 left-1/2 opacity-10" style="animation-delay: 4s;"></div>
+    </div>
+    <!-- Navbar -->
+    <nav class="bg-white/90 backdrop-blur-md border-b border-gray-200 fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex items-center gap-8">
+                    <div class="flex items-center">
+                        <span class="text-2xl font-bold gradient-text">FreshDetect</span>
+                    </div>
+                    <div class="hidden md:flex gap-6">
+                        <a href="#hero" class="font-medium text-gray-700 hover:text-primary transition-colors flex items-center primary-underline">
+                            <span>Home</span>
+                        </a>
+                        <a href="#about-us" class="font-medium text-gray-700 hover:text-primary transition-colors flex items-center primary-underline">
+                            <span>About Us</span>
+                        </a>
+                        <a href="#product" class="font-medium text-gray-700 hover:text-primary transition-colors flex items-center primary-underline">
+                            <span>Product</span>
+                        </a>
+                        <a href="#features" class="font-medium text-gray-700 hover:text-primary transition-colors flex items-center primary-underline">
+                            <span>Features</span>
+                        </a>
+                        <a href="#contact" class="font-medium text-gray-700 hover:text-primary transition-colors flex items-center primary-underline">
+                            <span>Contact</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4">
+                    <a href="http://127.0.0.1:49403/dashboard.html" target="_blank">
+                        <button class="btn-primary px-6 py-3 rounded-full flex items-center gap-2 glow-box pulse">
+                        <i class="fas fa-seedling"></i>
+                        <span>Deteksi Sekarang!</span>
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="md:hidden hidden bg-white/90 backdrop-blur-lg border-t border-gray-200" id="mobile-menu">
+            <div class="px-4 py-3 space-y-4">
+                <a href="#hero" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-100">
+                    Home
+                </a>
+                <a href="#about-us" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-100">
+                    About Us
+                </a>
+                <a href="#product" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-100">
+                    Product
+                </a>
+                <a href="#features" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-100">
+                    Features
+                </a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-100">
+                    Contact
+                </a>
+                <div class="pt-4 border-t border-gray-200">
+                    <button class="w-full btn-secondary px-4 py-2 rounded-md text-base font-medium">
+                        Sign In
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- hero section -->
+    <section id="hero" class="pt-32 pb-24 px-4 sm:px-6 lg:px-8 relative z-10 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col lg:flex-row items-center gap-8 xl:gap-12">
+                <div class="lg:w-1/2">
+                    <div class="bg-green-100/50 border border-green-200 rounded-full px-4 py-1.5 w-max mb-6 glow-box">
+                        <span class="text-green-700 text-sm font-medium">INOVASI DETEKSI KESEGARAN</span>
+                    </div>
+                    <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold hero-title mb-6 text-gray-800">
+                        <span class="gradient-text">AI Deteksi Kesegaran</span> <span class="typewriter typing">Buah & Sayur Anda</span>
+                    </h1>
+                    <p class="text-xl md:text-2xl text-gray-600 mb-8 max-w-xl">
+                        Aplikasi revolusioner kami menggunakan AI untuk menganalisis gambar buah dan sayur, memberikan informasi kesegaran instan.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 mb-12">
+                        <a href="http://127.0.0.1:49403/dashboard.html">
+                            <button class="btn-primary px-8 py-4 rounded-full text-lg flex items-center justify-center gap-2">
+                                <i class="fas fa-camera"></i>
+                                Mulai Deteksi Sekarang
+                            </button>
+                        </a>
+                    
+                        <a href="#features">
+                            <button class="btn-secondary px-8 py-4 rounded-full text-lg flex items-center justify-center gap-2">
+                                <i class="fas fa-play-circle"></i>
+                                Lihat Cara Kerja
+                            </button>
+                        </a>
+                    </div>                    
+                </div>
+                <div class="lg:w-1/2 relative hero-ai-tool">
+                    <div class="relative floating">
+                        <div class="gradient-box rounded-xl w-full max-w-xl mx-auto primary-border tilt-effect p-2">
+                            <div class="ai-tool-container">
+                                <div class="ai-tool-header flex items-center justify-between">
+                                    <div class="flex items-center gap-2">
+                                        <div class="w-3 h-3 rounded-full bg-red-400"></div>
+                                        <div class="w-3 h-3 rounded-full bg-yellow-400"></div>
+                                        <div class="w-3 h-3 rounded-full bg-green-400"></div>
+                                    </div>
+                                    <h3 class="text-xs font-medium text-gray-500">FreshDetect AI</h3>
+                                    <div class="w-20"></div>
+                                </div>
+                                <div class="ai-tool-content">
+                                    <div class="ai-message">
+                                        <h4 class="font-bold text-primary mb-1">🍎 Analisis Kesegaran Selesai!</h4>
+                                        <p class="text-sm text-gray-700">Selamat datang di asisten FreshDetect AI! Unggah gambar buah atau sayur Anda untuk analisis kesegaran instan.</p>
+                                    </div>
+                                    
+                                    <div class="ai-message">
+                                        <h4 class="font-bold text-primary mb-1">✨ Hasil Deteksi: Apel Merah Segar</h4>
+                                        <p class="text-sm text-gray-700">Apel yang Anda unggah terdeteksi **sangat segar** dengan tingkat kesegaran 95%.</p>
+                                        <div class="mt-3 flex items-center gap-2">
+                                            <span class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full"><i class="fas fa-percent"></i> 95% Segar</span>
+                                            <span class="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded-full"><i class="fas fa-flask"></i> AI Klasifikasi</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="ai-loading">
+                                        <span class="text-xs">Menunggu unggahan gambar baru...</span>
+                                        <div class="ai-loading-dot"></div>
+                                        <div class="ai-loading-dot"></div>
+                                        <div class="ai-loading-dot"></div>
+                                    </div>
+                                </div>
+                                <div class="ai-tool-input p-4 bg-gray-100/50">
+                                    <input type="file" id="image-upload-hero" accept="image/*" class="hidden">
+                                    <input type="text" placeholder="Atau, jelaskan buah/sayur Anda..." class="w-full" onclick="document.getElementById('image-upload-hero').click()">
+                                    <button onclick="document.getElementById('image-upload-hero').click()">
+                                        <i class="fas fa-upload"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute -bottom-6 -right-6 bg-white p-6 rounded-2xl shadow-2xl border border-gray-200 w-3/4 z-10 primary-border ai-tool-floating-card custom-card-bg">
+                            <div class="ai-chip bg-white text-green-700 border-green-200">REKOMENDASI RESEP!</div>
+                            <div class="flex items-center gap-2 mb-3">
+                                <div class="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center text-green-600 border border-green-200">
+                                    <i class="fas fa-utensils"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <div class="text-xs font-medium text-green-700">IDEA UNTUK APEL SEGAR ANDA</div>
+                                    <h4 class="font-bold text-gray-800">Apple Cinnamon Oatmeal</h4>
+                                </div>
+                                <div class="px-2 py-1 bg-green-100 text-green-700 text-xs font-bold rounded">Mudah</div>
+                            </div>
+                            <div class="flex justify-between items-center mt-4 text-xs">
+                                <div class="flex items-center gap-2">
+                                    <i class="fas fa-hourglass-half text-gray-500"></i>
+                                    <span class="text-gray-600">Persiapan: 10 min</span>
+                                </div>
+                                <button class="text-xs btn-primary rounded-full font-bold">
+                                    <i class="fas fa-book-open mr-1"></i>
+                                    Lihat Resep
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="py-8 bg-white/70 border-y border-gray-200 relative overflow-hidden text-gray-700">
+        <div class="absolute inset-0 gradient-mask z-10"></div>
+        <div class="scrolling-text whitespace-nowrap text-gray-500 text-sm font-medium w-max flex gap-16">
+            <img src="/Assets/dicoding.png" alt="">
+            <span>•</span>
+            <img src="/Assets/aimerdeka.png" alt="">
+            <span>•</span>
+            <img src="/Assets/laskarai.png" alt="">
+            <span>•</span>
+            <img src="/Assets/linstasarta.png" alt="">
+            <span>•</span>
+            <img src="/Assets/logo_web.png" alt="">
+            <span>•</span>
+            <img src="/Assets/nvidia.png" alt="">
+            <span>•</span>
+            <img src="/Assets/uny.png" alt="">
+            <span>•</span>
+            <img src="/Assets/dicoding.png" alt="">
+            <span>•</span>
+            <img src="/Assets/aimerdeka.png" alt="">
+            <span>•</span>
+            <img src="/Assets/laskarai.png" alt="">
+            <span>•</span>
+            <img src="/Assets/linstasarta.png" alt="">
+            <span>•</span>
+            <img src="/Assets/logo_web.png" alt="">
+            <span>•</span>
+            <img src="/Assets/nvidia.png" alt="">
+            <span>•</span>
+            <img src="/Assets/uny.png" alt="">
+            <span>•</span>
+        </div>
+    </div>
+
+    <!-- Fitur unggulan -->
+    <section class="py-24 px-4 sm:px-6 lg:px-8 bg-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto relative z-10">
+            <div class="text-center mb-16">
+                <span class="inline-block px-4 py-1.5 rounded-full bg-green-100/50 border border-green-200 text-green-700 font-medium mb-4 glow-box">
+                    FITUR UNGGULAN
+                </span>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+                    Manfaatkan <span class="gradient-text">Kecanggihan FreshDetect</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    FreshDetect dirancang untuk membantu Anda mengelola buah dan sayur dengan lebih efisien dan berkelanjutan.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="gradient-box p-8 rounded-2xl feature-card tilt-effect custom-card-bg">
+                    <div class="w-12 h-12 rounded-full bg-primary/10 text-primary text-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">AI Klasifikasi & Deteksi</h3>
+                    <p class="text-gray-600">
+                        Unggah gambar buah atau sayur, dan AI kami akan mendeteksi jenisnya serta mengklasifikasikan tingkat kesegarannya secara akurat.
+                    </p>
+                </div>
+                
+                <div class="gradient-box p-8 rounded-2xl feature-card tilt-effect custom-card-bg">
+                    <div class="w-12 h-12 rounded-full bg-secondary/10 text-secondary text-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Rekomendasi Resep Kreatif</h3>
+                    <p class="text-gray-600">
+                        Dapatkan ide resep lezat berdasarkan buah dan sayur yang Anda miliki, baik yang segar maupun hampir busuk, untuk mengurangi limbah.
+                    </p>
+                </div>
+                
+                <div class="gradient-box p-8 rounded-2xl feature-card tilt-effect custom-card-bg">
+                    <div class="w-12 h-12 rounded-full bg-purple-500/10 text-purple-600 text-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-recycle"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Solusi 3R (Reduce, Reuse, Recycle)</h3>
+                    <p class="text-gray-600">
+                        Pelajari cara mengurangi pemborosan makanan dengan tips menyimpan, menggunakan kembali, atau mendaur ulang buah dan sayur.
+                    </p>
+                </div>
+                
+                <div class="gradient-box p-8 rounded-2xl feature-card tilt-effect custom-card-bg">
+                    <div class="w-12 h-12 rounded-full bg-yellow-500/10 text-yellow-600 text-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Tips Penyimpanan & Nutrisi</h3>
+                    <p class="text-gray-600">
+                        Dapatkan saran terbaik untuk menyimpan buah dan sayur agar tetap segar lebih lama, serta informasi nutrisi penting.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Alur penggunaan mudah -->
+    <section id="how-it-works" class="py-24 px-4 sm:px-6 lg:px-8 relative z-10 bg-gray-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="inline-block px-4 py-1.5 rounded-full bg-green-100/50 border border-green-200 text-green-700 font-medium mb-4 glow-box">
+                    ALUR PENGGUNAAN MUDAH
+                </span>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+                    Mulai Deteksi dalam <span class="gradient-text">3 Langkah</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Platform kami membuat deteksi kesegaran buah dan sayur menjadi cepat dan informatif.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 relative">
+                <div class="gradient-box p-8 rounded-2xl primary-border feature-card tilt-effect animate-fade-in custom-card-bg">
+                    <div class="flex flex-col items-center text-center">
+                        <div class="relative mb-6">
+                            <div class="w-24 h-24 bg-gradient-to-br from-white to-gray-100 rounded-full flex items-center justify-center text-primary text-3xl font-bold mb-6 border border-gray-200 shadow-inner-custom">
+                                1
+                            </div>
+                            <div class="ai-chip bg-white text-green-700 border-green-200">UNGGAH MUDAH</div>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Unggah Gambar Anda</h3>
+                        <p class="text-gray-600">
+                            Ambil foto buah atau sayur dengan kamera ponsel Anda atau unggah dari galeri.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="gradient-box p-8 rounded-2xl primary-border feature-card tilt-effect animate-fade-in" style="animation-delay: 0.2s; background-color: #F8F8F8;">
+                    <div class="flex flex-col items-center text-center">
+                        <div class="relative mb-6">
+                            <div class="w-24 h-24 bg-gradient-to-br from-white to-gray-100 rounded-full flex items-center justify-center text-primary text-3xl font-bold mb-6 border border-gray-200 shadow-inner-custom">
+                                2
+                            </div>
+                            <div class="ai-chip bg-white text-green-700 border-green-200">POWERED BY AI</div>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Dapatkan Hasil AI</h3>
+                        <p class="text-gray-600">
+                            AI kami akan langsung menganalisis gambar, mengidentifikasi jenis buah/sayur, dan tingkat kesegarannya.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="gradient-box p-8 rounded-2xl primary-border feature-card tilt-effect animate-fade-in" style="animation-delay: 0.4s; background-color: #F8F8F8;">
+                    <div class="flex flex-col items-center text-center">
+                        <div class="relative mb-6">
+                            <div class="w-24 h-24 bg-gradient-to-br from-white to-gray-100 rounded-full flex items-center justify-center text-primary text-3xl font-bold mb-6 border border-gray-200 shadow-inner-custom">
+                                3
+                            </div>
+                            <div class="ai-chip bg-white text-green-700 border-green-200">SOLUSI LENGKAP</div>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Manfaatkan Rekomendasi</h3>
+                        <p class="text-gray-600">
+                            Terima saran resep, tips penyimpanan, dan solusi 3R (Reduce, Reuse, Recycle) untuk hasil deteksi Anda.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-16 text-center">
+                <a href="http://127.0.0.1:49403/dashboard.html" class="btn-primary px-8 py-4 rounded-full text-lg glow-box inline-block">
+                    <i class="fas fa-leaf mr-2"></i>
+                    Coba Deteksi Gratis
+                </a>
+            </div>            
+        </div>
+    </section>
+
+    <!-- Tentang kami -->
+    <section id="about-us" class="py-24 px-4 sm:px-6 lg:px-8 bg-white relative">
+        <div class="max-w-7xl mx-auto relative z-10">
+            <div class="text-center mb-16">
+                <span class="inline-block px-4 py-1.5 rounded-full bg-green-100/50 border border-green-200 text-green-700 font-medium mb-4 glow-box">
+                    TENTANG KAMI
+                </span>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+                    FreshScan: <span class="gradient-text">Tujuan, Visi, & Misi</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Kami hadir untuk memberdayakan Anda dalam menjaga kualitas makanan dan mengurangi pemborosan.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <div class="about-card p-8 rounded-2xl relative overflow-hidden custom-card-bg">
+                    <div class="absolute -right-10 -top-10 w-48 h-48 rounded-full bg-green-100 blur-2xl opacity-50"></div>
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-16 h-16 rounded-full bg-green-100 text-green-600 text-3xl flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-2xl text-gray-800">Tujuan Kami</h3>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed">
+                        Membantu individu dan keluarga membuat keputusan yang lebih cerdas tentang makanan mereka, **mengurangi limbah makanan rumah tangga**, dan mempromosikan **gaya hidup berkelanjutan** melalui teknologi AI yang inovatif dan mudah diakses.
+                    </p>
+                </div>
+                
+                <div class="about-card p-8 rounded-2xl relative overflow-hidden custom-card-bg">
+                    <div class="absolute -right-10 -top-10 w-48 h-48 rounded-full bg-blue-100 blur-2xl opacity-50"></div>
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-16 h-16 rounded-full bg-blue-100 text-blue-600 text-3xl flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-2xl text-gray-800">Visi Kami</h3>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed">
+                        Menjadi platform terdepan di dunia untuk **deteksi kesegaran hasil bumi** dan **manajemen limbah makanan** berbasis AI, menciptakan masa depan di mana setiap orang memiliki akses ke makanan segar dan tidak ada yang terbuang sia-sia.
+                    </p>
+                </div>
+                
+                <div class="about-card p-8 rounded-2xl relative overflow-hidden custom-card-bg">
+                    <div class="absolute -right-10 -top-10 w-48 h-48 rounded-full bg-purple-100 blur-2xl opacity-50"></div>
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-16 h-16 rounded-full bg-purple-100 text-purple-600 text-3xl flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-2xl text-gray-800">Misi Kami</h3>
+                        </div>
+                    </div>
+                    <ul class="text-gray-700 leading-relaxed space-y-2 list-disc list-inside">
+                        <li>Mengembangkan dan menyempurnakan algoritma AI untuk deteksi kesegaran yang paling akurat.</li>
+                        <li>Menyediakan rekomendasi resep inovatif dan solusi 3R yang praktis.</li>
+                        <li>Membangun komunitas global yang sadar akan pentingnya mengurangi limbah makanan.</li>
+                        <li>Terus berinovasi untuk menyederhanakan pengelolaan makanan sehari-hari.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Teknologi mutahir -->
+    <section id="product" class="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden bg-gray-50">
+        <div class="max-w-7xl mx-auto relative z-10">
+            <div class="text-center mb-16">
+                <span class="inline-block px-4 py-1.5 rounded-full bg-green-100/50 border border-green-200 text-green-700 font-medium mb-4 glow-box">
+                    TEKNOLOGI MUTAKHIR
+                </span>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+                    Mesin <span class="gradient-text">Deteksi AI Kami</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Kecerdasan buatan kami menganalisis berbagai parameter untuk memastikan Anda mendapatkan hasil deteksi kesegaran yang paling akurat.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-3xl font-bold text-gray-800 mb-6">Algoritma Klasifikasi Cerdas</h3>
+                    <p class="text-gray-600 mb-6">
+                        Jaringan saraf tiruan (neural network) kami yang canggih mengevaluasi ratusan faktor untuk menghitung tingkat kesegaran:
+                    </p>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start gap-3">
+                            <div class="w-6 h-6 rounded-full bg-primary/10 text-primary flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="fas fa-check text-xs"></i>
+                            </div>
+                            <span class="text-gray-600">Warna dan pigmentasi alami</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <div class="w-6 h-6 rounded-full bg-primary/10 text-primary flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="fas fa-check text-xs"></i>
+                            </div>
+                            <span class="text-gray-600">Tekstur dan kepadatan permukaan</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <div class="w-6 h-6 rounded-full bg-primary/10 text-primary flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="fas fa-check text-xs"></i>
+                            </div>
+                            <span class="text-gray-600">Adanya bintik, jamur, atau kerusakan</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <div class="w-6 h-6 rounded-full bg-primary/10 text-primary flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="fas fa-check text-xs"></i>
+                            </div>
+                            <span class="text-gray-600">Perubahan bentuk dan ukuran</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <div class="w-6 h-6 rounded-full bg-primary/10 text-primary flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="fas fa-check text-xs"></i>
+                            </div>
+                            <span class="text-gray-600">Data historis kematangan buah/sayur</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="gradient-box rounded-xl p-1 primary-border tilt-effect custom-card-bg">
+                    <div class="bg-gray-100 rounded-lg p-8 aspect-video flex items-center justify-center">
+                        <div class="text-center">
+                            <div class="w-20 h-20 mx-auto rounded-full bg-green-100 text-green-600 text-3xl flex items-center justify-center mb-6">
+                                <i class="fas fa-microchip"></i>
+                            </div>
+                            <h4 class="font-bold text-2xl text-gray-800 mb-2">Visualisasi Deteksi AI</h4>
+                            <p class="text-gray-600 mb-4">Lihat bagaimana AI memproses gambar buah & sayur</p>
+                            <div class="flex gap-2 justify-center">
+                                <div class="w-6 h-6 rounded-full bg-green-200 border border-green-300 animate-pulse" style="animation-delay: 0s;"></div>
+                                <div class="w-6 h-6 rounded-full bg-green-300 border border-green-400 animate-pulse" style="animation-delay: 0.2s;"></div>
+                                <div class="w-6 h-6 rounded-full bg-green-400 border border-green-500 animate-pulse" style="animation-delay: 0.4s;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Apa yang kami tawarkan -->
+    <section id="features" class="py-24 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="inline-block px-4 py-1.5 rounded-full bg-green-100/50 border border-green-200 text-green-700 font-medium mb-4 glow-box">
+                    APA YANG KAMI TAWARKAN
+                </span>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+                    Solusi Lengkap <span class="gradient-text">FreshScan</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    FreshDetect menyediakan fitur-fitur yang komprehensif untuk mendukung gaya hidup sehat dan berkelanjutan Anda.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 gap-8">
+                <div class="gradient-box p-8 rounded-2xl feature-card custom-card-bg">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-lg bg-green-100 text-green-600 text-xl flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-camera-retro"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">AI Klasifikasi & Deteksi Gambar</h3>
+                            <p class="text-gray-600">
+                                Unggah foto buah atau sayur Anda, dan AI kami akan secara otomatis mengidentifikasi jenisnya serta memberikan penilaian kesegaran yang akurat secara *real-time*.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gradient-box p-8 rounded-2xl feature-card custom-card-bg">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-lg bg-blue-100 text-blue-600 text-xl flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-kitchen-set"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Rekomendasi Resep Cerdas</h3>
+                            <p class="text-gray-600">
+                                Dapatkan ide resep inovatif yang disesuaikan dengan tingkat kesegaran buah dan sayur Anda, memaksimalkan penggunaan bahan dan mengurangi pemborosan makanan.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gradient-box p-8 rounded-2xl feature-card custom-card-bg">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-lg bg-purple-100 text-purple-600 text-xl flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-leaf-recycle"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Solusi 3R untuk Lingkungan</h3>
+                            <p class="text-gray-600">
+                                FreshDetect menyediakan panduan praktis untuk mengurangi, menggunakan kembali, dan mendaur ulang buah dan sayur yang mungkin sudah tidak segar, mendukung gaya hidup ramah lingkungan.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gradient-box p-8 rounded-2xl feature-card custom-card-bg">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-lg bg-yellow-100 text-yellow-600 text-xl flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-info-circle"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Tips Penyimpanan & Nutrisi</h3>
+                            <p class="text-gray-600">
+                                Pelajari cara menyimpan buah dan sayur dengan benar agar tahan lebih lama, serta dapatkan informasi detail mengenai kandungan nutrisi untuk pilihan makanan yang lebih sehat.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coba sekarang -->
+    <section class="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-green-500 to-blue-500 relative overflow-hidden text-white">
+        <div class="max-w-7xl mx-auto text-center relative z-10">
+            <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+                Siap Mengubah Cara Anda Mengelola <span class="text-white glow-text">Buah & Sayur</span>?
+            </h2>
+            <p class="text-xl text-white/90 max-w-3xl mx-auto mb-10">
+                Bergabunglah dengan FreshScan hari ini dan mulai perjalanan menuju dapur yang lebih segar, sehat, dan berkelanjutan.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button class="btn-primary px-8 py-4 rounded-full text-lg">
+                    <i class="fas fa-leaf mr-2"></i>
+                    Mulai Gratis Sekarang
+                </button>
+            </div>
+            <div class="mt-10 flex flex-wrap items-center justify-center gap-6 text-sm text-white/70">
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Aman & Terpercaya</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-lock"></i>
+                    <span>Privasi Data</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-sync-alt"></i>
+                    <span>Update Berkala</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fotter -->
+    <footer id="contact" class="bg-gray-800/90 border-t border-gray-700 relative z-10 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-12">
+                <div class="col-span-2">
+                    <div class="flex items-center mb-6">
+                        <span class="text-2xl font-bold gradient-text">FreshDetect</span>
+                    </div>
+                    <p class="text-gray-400 mb-6">
+                        Solusi cerdas untuk kesegaran buah dan sayur Anda, didukung AI.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center text-gray-300 hover:text-green-400 transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center text-gray-300 hover:text-green-400 transition-colors">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center text-gray-300 hover:text-green-400 transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center text-gray-300 hover:text-green-400 transition-colors">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Produk</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-green-400 transition-colors">Deteksi Kesegaran</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-green-400 transition-colors">Rekomendasi Resep</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-green-400 transition-colors">Solusi 3R</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-green-400 transition-colors">Tips Penyimpanan</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Perusahaan</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-green-400 transition-colors">Tentang Kami</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-green-400 transition-colors">Karir</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-green-400 transition-colors">Blog</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-green-400 transition-colors">Kontak</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Bantuan</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-green-400 transition-colors">Pusat Bantuan</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-green-400 transition-colors">FAQ</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-green-400 transition-colors">Kebijakan Privasi</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-green-400 transition-colors">Syarat & Ketentuan</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center text-gray-400">
+                <p>
+                    © 2025 FreshDetect. Semua hak dilindungi.
+                </p>
+                <div class="flex gap-6 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-green-400 transition-colors text-sm">Kebijakan Privasi</a>
+                    <a href="#" class="hover:text-green-400 transition-colors text-sm">Syarat Penggunaan</a>
+                    <a href="#" class="hover:text-green-400 transition-colors text-sm">Kebijakan Cookie</a>
+                </div>
+            </div>
+            <div class="mt-6 text-center md:text-left text-xs text-gray-500">
+                <p>"FreshDetect" adalah merek dagang terdaftar dari FreshDetect Technologies LLC.</p>
+                <p class="mt-1">Masa depan manajemen buah dan sayur yang cerdas ada di sini.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="/js/page.js"></script>
+</html>
